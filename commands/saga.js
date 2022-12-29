@@ -102,6 +102,10 @@ module.exports = {
 					{name: 'Youtube video - heroic difficulty', value: youtubeUrlHeroic},
 				)
 				.setImage(imageUrl)
+				
+				interaction.channel.send({embeds: [embedSent]})
+	
+				await interaction.reply('Good luck Commander!');
 			} else{
 				const embedSent = new EmbedBuilder()
 				.setTitle(interaction.options.getString("saga-team"))
@@ -111,11 +115,13 @@ module.exports = {
 					{name: 'Youtube video', value: youtubeUrl},
 				)
 				.setImage(imageUrl)
+				
+				interaction.channel.send({embeds: [embedSent]})
+	
+				await interaction.reply('Good luck Commander!');
 			}
 
-			interaction.channel.send({embeds: [embedSent]})
-	
-			await interaction.reply('Good luck Commander!');
+
 		}
 
     },
