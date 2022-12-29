@@ -42,7 +42,6 @@ module.exports = {
 			{name: 'Detailed Guide', value: postUrl},
 			{name: 'Youtube video', value: youtubeUrl}
 		)
-        .setImage(imageUrl)
 
         interaction.channel.send({embeds: [embedSent]})
 
