@@ -11,7 +11,7 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
-                {name: 'war saga gamma', value: 'gamma'},
+                {name: 'war saga gamma', value: war saga gamma'},
                 {name: 'famine saga unlimited x-men', value: 'famine saga unlimited x-men'},
 				{name: 'pestilence saga darkhold', value: 'pestilence saga darkhold'},
              )),
