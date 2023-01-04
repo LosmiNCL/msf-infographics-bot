@@ -44,7 +44,7 @@ admin.initializeApp({
 //const auth = getAuth(app);
 const dbref = ref(db);
 
-module.exports = {firebase, database, app, admin, db, dbref}
+module.exports = {firebase, database, admin, db, dbref}
 
 client.commands = new Collection();
 
