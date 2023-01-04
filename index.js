@@ -41,6 +41,10 @@ admin.initializeApp({
 	  }
   })
 
+console.log(process.env.FIREBASE_PROJECT_ID);
+console.log(process.env.FIREBASE_CLIENT_EMAIL);
+console.log(process.env.FIREBASE_PRIVATE_KEY);
+
 var db = admin.database();
 const dbref = ref(db);
 
