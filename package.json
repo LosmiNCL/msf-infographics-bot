@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+     "@google-cloud/bigquery": "^6.0.3",
     "discord.js": "^14.7.1",
     "dotenv": "^8.2.0",
     "firebase": "^9.14.0",
+    "firebase-admin": "^11.4.1",
     "node": "^16.18.1"
   },
   "devDependencies": {
