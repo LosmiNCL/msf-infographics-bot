@@ -40,7 +40,7 @@ admin.initializeApp({
 		uid: process.env.FOR_AUTH_UID
 	  }
   })
-const db = getDatabase();
+var db = admin.database();
 const dbref = ref(db);
 
 module.exports = {firebase, database, admin, db, dbref}
