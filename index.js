@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Events, GatewayIntentBits, Collection } = require('discord.js');
 var admin = require("firebase-admin");
-require('dotenv').config();
+
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
