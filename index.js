@@ -1,14 +1,16 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Events, GatewayIntentBits, Collection } = require('discord.js');
-
+var admin = require("firebase-admin");
+require('dotenv').config();
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+
 
 const firebase = require('firebase/app');
 const database = require('firebase/database');
-const { getAuth } = require('firebase/auth');
 
-const {initializeApp} = require('firebase/compat/app');
+
+const {initializeApp} = require('firebase-admin/app');
 
 const { getDatabase, ref, get, child } = require('firebase/database');
 const { channel } = require('diagnostics_channel');
@@ -24,13 +26,30 @@ const firebaseConfig = {
 	measurementId: "G-D5YNRELPN1"
   };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getDatabase();
+  console.log(process.env.FIREBASE_PROJECT_ID);
+  console.log(process.env.FIREBASE_CLIENT_EMAIL);
+  console.log(process.env.FIREBASE_PRIVATE_KEY);
+  console.log(process.env.FOR_AUTH_UID);
+
+admin.initializeApp({
+	credential: admin.credential.cert({
+	  projectId: process.env.FIREBASE_PROJECT_ID,
+	  clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+	  // replace `\` and `n` character pairs w/ single `\n` character
+	  privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+	}),
+	// The database URL depends on the location of the database
+	databaseURL: "https://msf-discord-bot-default-rtdb.europe-west1.firebasedatabase.app",
+	databaseAuthVariableOverride: {
+		uid: process.env.FOR_AUTH_UID
+	  }
+  })
+
+ var db = admin.database();
 const dbref = ref(db);
 
-module.exports = {firebase, database, app, auth, db, dbref}
+module.exports = {firebase, database, admin, db, dbref}
+
 
 client.commands = new Collection();
 
@@ -61,4 +80,4 @@ for (const file of eventFiles) {
 	}
 }
 
-client.login(process.env.BOT_TOKEN)
+client.login(process.env.BOT_TOKEN);
