@@ -13,7 +13,7 @@ module.exports = {
 			.addChoices(
 				{name: 'arena meta horsemen', value: 'arena meta horsemen'},
 				{name: 'arena meta eternals', value: 'arena meta eternals'},
-				{name: 'arena defense horsmans dormammu', value: 'arena defense horsmans dormammu'},
+				{name: 'arena defense horsemen dormammu', value: 'arena defense horsemen dormammu'},
 				{name: 'arena defense tangled web emma dormammu red hulk', value: 'arena defense tangled web emma dormammu red hulk'},
 				{name: 'arena defense emma dormammu rogue', value: 'arena defense emma dormammu rogue'},
 				{name: 'arena defense tangled web emma eternals', value: 'arena defense tangled web emma eternals'}
