@@ -11,8 +11,7 @@ module.exports = {
 			.setDescription('Name of the Team')
 			.setRequired(true)
 			.addChoices(
-				{name: 'arena meta horsemen', value: 'arena meta horsemen'},
-				{name: 'arena meta eternals', value: 'arena meta eternals'},
+				{name: 'arena meta horsemen tangled web', value: 'arena meta horsemen tangled web'},
 				{name: 'arena defense horsemen dormammu', value: 'arena defense horsemen dormammu'},
 				{name: 'arena defense tangled web emma dormammu red hulk', value: 'arena defense tangled web emma dormammu red hulk'},
 				{name: 'arena defense emma dormammu rogue', value: 'arena defense emma dormammu rogue'},
@@ -23,6 +22,15 @@ module.exports = {
 		var youtubeUrl = null;
 		var imageUrl = null;
 
+		await get(child(dbref, '/infographics/arena/' + interaction.options.getString("arena-team") + '/image-url')).then((snapshot) => {
+			if (snapshot.exists()){
+				imageUrl = snapshot.val();
+
+			} else {
+				imageUrl = "Not found";
+			}
+		})
+
 		await get(child(dbref, '/infographics/arena/' + interaction.options.getString("arena-team") + '/post-url')).then((snapshot) => {
 			if (snapshot.exists()){
 				postUrl = snapshot.val();
@@ -32,11 +40,11 @@ module.exports = {
 			}
 		})
 
-		if(interaction.options.getString("arena-team") === 'arena meta horsemen' || interaction.options.getString("arena-team") === 'arena meta eternals'){
+		if(interaction.options.getString("arena-team") === 'arena meta horsemen tangled web' || interaction.options.getString("arena-team") === 'arena defense tangled web emma eternals'){
 			await get(child(dbref, '/infographics/arena/' + interaction.options.getString("arena-team") + '/youtube-url')).then((snapshot) => {
 				if (snapshot.exists()){
 					youtubeUrl = snapshot.val();
-	
+
 				} else {
 					youtubeUrl = "Not found";
 				}
@@ -48,18 +56,11 @@ module.exports = {
 				{name: 'Detailed Guide', value: postUrl},
 				{name: 'Youtube video', value: youtubeUrl}
 			)
-	
-			interaction.channel.send({embeds: [embedSent]})
-		} else {
-			await get(child(dbref, '/infographics/arena/' + interaction.options.getString("arena-team") + '/image-url')).then((snapshot) => {
-				if (snapshot.exists()){
-					imageUrl = snapshot.val();
-	
-				} else {
-					imageUrl = "Not found";
-				}
-			})
+			.setImage(imageUrl)
 
+			interaction.channel.send({embeds: [embedSent]})
+		}
+		else{
 			const embedSent = new EmbedBuilder()
 			.setTitle(interaction.options.getString("arena-team"))
 			.setFields(
