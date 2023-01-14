@@ -11,13 +11,8 @@ module.exports = {
              .setDescription('Name of the event')
              .setRequired(true)
              .addChoices(
-                //{name: 'super patriot', value: 'super patriot'},
                 {name: 'war zone milestone', value: 'war zone milestone'},
-                //{name: 'hostile forces web milestone', value: 'hostile forces web milestone'},
-				//{name: 'war of shadows quick rumble (underworld)', value: 'war of shadows quick rumble (underworld)'},
-                //{name: 'power broker bargain milestone - main weekly event', value: 'power broker bargain milestone - main weekly event'},
-                //{name: 'war inc. web milestone', value: 'war inc. web milestone'},
-                //{name: 'arachni ambush quick rumble (web-warriors)'}
+		{name: 'woman out of time', value: 'woman out of time'}
              )),
     async execute(interaction) {
 
