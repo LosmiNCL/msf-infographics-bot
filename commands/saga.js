@@ -2,6 +2,10 @@ const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const { ref, child, get } = require('firebase/database');
 const { db, dbref } = require('..');
 
+const catchErr = err => {
+	console.log(err)
+  }
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('saga')
@@ -30,7 +34,7 @@ module.exports = {
 					imageUrl = snapshot.val();
 	
 				} else {
-					imageUrl = "Not found";
+					imageUrl = "https://cdn.pixabay.com/photo/2017/02/12/21/29/false-2061131__480.png";
 				}
 			})
 			
@@ -38,9 +42,15 @@ module.exports = {
 			.setTitle(interaction.options.getString("saga-team"))
 			.setImage(imageUrl)
 
-			interaction.channel.send({embeds: [embedSent]})
-
-			await interaction.reply('Good luck Commander!');
+			try{
+				await interaction.channel.send({embeds: [embedSent]});
+	
+				await interaction.reply('Good luck Commander!');
+				
+			} catch(err){
+				await interaction.reply('Inform the Admin of your Discord server to give me required permissions. We cannot stop Ultimus like this!');
+				catchErr(err);
+			}
 
 		} else {
 
@@ -49,7 +59,7 @@ module.exports = {
 					imageUrl = snapshot.val();
 	
 				} else {
-					imageUrl = "Not found";
+					imageUrl = "https://cdn.pixabay.com/photo/2017/02/12/21/29/false-2061131__480.png";
 				}
 			})
 	
@@ -103,9 +113,15 @@ module.exports = {
 				)
 				.setImage(imageUrl)
 				
-				interaction.channel.send({embeds: [embedSent]})
-	
-				await interaction.reply('Good luck Commander!');
+				try{
+					await interaction.channel.send({embeds: [embedSent]});
+		
+					await interaction.reply('Good luck Commander!');
+					
+				} catch(err){
+					await interaction.reply('Inform the Admin of your Discord server to give me required permissions. We cannot stop Ultimus like this!');
+					catchErr(err);
+				}
 			} else{
 				const embedSent = new EmbedBuilder()
 				.setTitle(interaction.options.getString("saga-team"))
@@ -116,9 +132,15 @@ module.exports = {
 				)
 				.setImage(imageUrl)
 				
-				interaction.channel.send({embeds: [embedSent]})
-	
-				await interaction.reply('Good luck Commander!');
+				try{
+					await interaction.channel.send({embeds: [embedSent]});
+		
+					await interaction.reply('Good luck Commander!');
+					
+				} catch(err){
+					await interaction.reply('Inform the Admin of your Discord server to give me required permissions. We cannot stop Ultimus like this!');
+					catchErr(err);
+				}
 			}
 
 
