@@ -15,10 +15,8 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
-                {name: 'custom legendary', value: 'custom legendary'},
-                {name: 'darkhold', value: 'darkhold'},
-				{name: 'death seed', value: 'death seed'},
-				{name: 'unlimited x-men', value: 'unlimited x-men'},
+                {name: 'wakanda', value: 'wakanda'},
+                {name: 'war dogs', value: 'war dogs'},
              )),
     async execute(interaction) {
 

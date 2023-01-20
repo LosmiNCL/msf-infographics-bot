@@ -15,10 +15,10 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
-                {name: 'black order', value: 'black order'},
-                {name: 'eternals', value: 'eternals'},
-				{name: 'infinity watch', value: 'infinity watch'},
-				{name: 'x-factor', value: 'x-factor'},
+                {name: 'hero asgardian', value: 'hero asgardian'},
+                {name: 'underworld', value: 'underworld'},
+				{name: 'young avengers', value: 'young avengers'},
+				{name: 'bionic avengers', value: 'bionic avengers'},
              )),
     async execute(interaction) {
 

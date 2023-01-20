@@ -15,9 +15,11 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
-                {name: 'bionic avengers', value: 'bionic avengers'},
+                {name: 'astonishing x-men', value: 'astonishing x-men'},
                 {name: 'uncanny x-men', value: 'uncanny x-men'},
-				{name: 'wakanda', value: 'wakanda'},
+				{name: 'unlimited x-men', value: 'unlimited x-men'},
+				{name: 'x-force', value: 'x-force'},
+				{name: 'x-factor and silver surfer', value: 'x-factor and silver surfer'},
              )),
     async execute(interaction) {
 
