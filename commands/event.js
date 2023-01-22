@@ -9,7 +9,7 @@ const catchErr = err => {
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('event')
-        .setDescription('Weekly and Monthly Events')
+        .setDescription('All Events')
         .addStringOption(option =>
              option.setName('event')
              .setDescription('Name of the event')
