@@ -48,8 +48,9 @@ module.exports = {
 			.setTitle(interaction.options.getString("event"))
 			.setFields(
 				{name: 'Detailed guide available at: ', value: postUrl},
-				{name: 'Infographic available at: ', value: imageUrl}
+				{name: 'Infographic available at: ', value: imageUrl},
 			)
+			.setImage(imageUrl)
 
 			try{
 				await interaction.channel.send({embeds: [embedSent]});
