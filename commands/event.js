@@ -50,6 +50,16 @@ module.exports = {
 				{name: 'Detailed guide available at: ', value: postUrl},
 				{name: 'Infographic available at: ', value: imageUrl}
 			)
+
+			try{
+				await interaction.channel.send({embeds: [embedSent]});
+	
+				await interaction.reply('Good luck Commander!');
+				
+			} catch(err){
+				await interaction.reply('Inform the Admin of your Discord server to give me required permissions. We cannot stop Ultimus like this!');
+				catchErr(err);
+			}
 		}
 		else{
 			const embedSent = new EmbedBuilder()
@@ -58,16 +68,18 @@ module.exports = {
 				{name: 'More info: ', value: postUrl},
 			)
 			.setImage(imageUrl)
+
+			try{
+				await interaction.channel.send({embeds: [embedSent]});
+	
+				await interaction.reply('Good luck Commander!');
+				
+			} catch(err){
+				await interaction.reply('Inform the Admin of your Discord server to give me required permissions. We cannot stop Ultimus like this!');
+				catchErr(err);
+			}
 		}
 
-		try{
-			await interaction.channel.send({embeds: [embedSent]});
 
-			await interaction.reply('Good luck Commander!');
-			
-		} catch(err){
-			await interaction.reply('Inform the Admin of your Discord server to give me required permissions. We cannot stop Ultimus like this!');
-			catchErr(err);
-		}
     },
 };
