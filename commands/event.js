@@ -50,7 +50,6 @@ module.exports = {
 				{name: 'Detailed guide available at: ', value: postUrl},
 				{name: 'Infographic available at: ', value: imageUrl},
 			)
-			.setImage(imageUrl)
 
 			try{
 				await interaction.channel.send({embeds: [embedSent]});
