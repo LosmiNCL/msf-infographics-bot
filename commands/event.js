@@ -43,12 +43,22 @@ module.exports = {
 			}
 		})
 
-		const embedSent = new EmbedBuilder()
-		.setTitle(interaction.options.getString("event"))
-		.setFields(
-			{name: 'More info: ', value: postUrl},
-		)
-        .setImage(imageUrl)
+		if(interaction.options.getString("event") === 'super patriot weekly events 4th week'){
+			const embedSent = new EmbedBuilder()
+			.setTitle(interaction.options.getString("event"))
+			.setFields(
+				{name: 'Detailed guide available at: ', value: postUrl},
+				{name: 'Infographic available at: ', value: imageUrl}
+			)
+		}
+		else{
+			const embedSent = new EmbedBuilder()
+			.setTitle(interaction.options.getString("event"))
+			.setFields(
+				{name: 'More info: ', value: postUrl},
+			)
+			.setImage(imageUrl)
+		}
 
 		try{
 			await interaction.channel.send({embeds: [embedSent]});
