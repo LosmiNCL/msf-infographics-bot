@@ -17,7 +17,8 @@ module.exports = {
              .addChoices(
                 {name: 'war zone milestone', value: 'war zone milestone'},
 				{name: 'woman out of time', value: 'woman out of time'},
-				{name: 'rising star and battlefield ready events', value: 'rising star and battlefield ready events'}
+				{name: 'rising star and battlefield ready events', value: 'rising star and battlefield ready events'},
+				{name: 'super patriot weekly events 4th week', value: 'super patriot weekly events 4th week'}
              )),
     async execute(interaction) {
 
