@@ -18,7 +18,8 @@ module.exports = {
                 {name: 'war zone milestone', value: 'war zone milestone'},
 				{name: 'woman out of time', value: 'woman out of time'},
 				{name: 'rising star and battlefield ready events', value: 'rising star and battlefield ready events'},
-				{name: 'super patriot weekly events 4th week', value: 'super patriot weekly events 4th week'}
+				{name: 'super patriot weekly events 4th week', value: 'super patriot weekly events 4th week'},
+				{name: 'lunar festival', value: 'lunar festival'}
              )),
     async execute(interaction) {
 
@@ -43,7 +44,7 @@ module.exports = {
 			}
 		})
 
-		if(interaction.options.getString("event") === 'super patriot weekly events 4th week'){
+		if(interaction.options.getString("event") === 'super patriot weekly events 4th week' || interaction.options.getString("event") === 'lunar festival'){
 			const embedSent = new EmbedBuilder()
 			.setTitle(interaction.options.getString("event"))
 			.setFields(
