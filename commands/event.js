@@ -46,7 +46,7 @@ module.exports = {
 		})
 
 		if(interaction.options.getString("event") === 'super patriot weekly events 4th week' || interaction.options.getString("event") === 'lunar festival'
-			|| interaction.options.getString("event") === 'trial of strength'){
+			|| interaction.options.getString("event") === 'trial of strength' || interaction.options.getString("event") === 'trial of strenght without hoarding'){
 			const embedSent = new EmbedBuilder()
 			.setTitle(interaction.options.getString("event"))
 			.setFields(
