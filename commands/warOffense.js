@@ -31,6 +31,7 @@ module.exports = {
                 {name: 'war dogs', value: 'war dogs'},
                 {name: 'weapon x', value: 'weapon x'},
                 {name: 'x-factor and kestrel', value: 'x-factor and kestrel'},
+				{name: 'rebirth', value: 'rebirth'}
              )),
     async execute(interaction) {
 

@@ -19,7 +19,8 @@ module.exports = {
 				{name: 'arena defense horsemen dormammu', value: 'arena defense horsemen dormammu'},
 				{name: 'arena defense tangled web emma dormammu red hulk', value: 'arena defense tangled web emma dormammu red hulk'},
 				{name: 'arena defense emma dormammu rogue', value: 'arena defense emma dormammu rogue'},
-				{name: 'arena defense tangled web emma eternals', value: 'arena defense tangled web emma eternals'}
+				{name: 'arena defense tangled web emma eternals', value: 'arena defense tangled web emma eternals'},
+				{name: 'arena defense horsemen and apocalypse', value: 'arena defense horsemen and apocalypse'}
 			)),
 	async execute(interaction) {
 		var postUrl = null;

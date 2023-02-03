@@ -19,6 +19,7 @@ module.exports = {
                 {name: 'underworld', value: 'underworld'},
 				{name: 'young avengers', value: 'young avengers'},
 				{name: 'bionic avengers', value: 'bionic avengers'},
+				{name: 'rebirth', value: 'rebirth'}
              )),
     async execute(interaction) {
 

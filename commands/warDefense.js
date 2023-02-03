@@ -31,6 +31,8 @@ module.exports = {
                 {name: 'tangled web', value: 'tangled web'},
                 {name: 'weapon x', value: 'weapon x'},
                 {name: 'young avengers', value: 'young avengers'},
+				{name: 'rebirth', value: 'rebirth'},
+				{name: 'masters of evil', value: 'masters of evil'}
              )),
     async execute(interaction) {
 
