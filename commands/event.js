@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the event')
              .setRequired(true)
              .addChoices(
+				{name: 'rage of the past', value: 'rage of the past'},
                 {name: 'war zone milestone', value: 'war zone milestone'},
 				{name: 'woman out of time', value: 'woman out of time'},
 				{name: 'rising star and battlefield ready events', value: 'rising star and battlefield ready events'},
@@ -47,7 +48,8 @@ module.exports = {
 		})
 
 		if(interaction.options.getString("event") === 'super patriot weekly events 4th week' || interaction.options.getString("event") === 'lunar festival'
-			|| interaction.options.getString("event") === 'trial of strength' || interaction.options.getString("event") === 'trial of strenght without hoarding'){
+			|| interaction.options.getString("event") === 'trial of strength' || interaction.options.getString("event") === 'trial of strenght without hoarding'
+			|| interaction.options.getString("event") === 'rage of the past'){
 			const embedSent = new EmbedBuilder()
 			.setTitle(interaction.options.getString("event"))
 			.setFields(
