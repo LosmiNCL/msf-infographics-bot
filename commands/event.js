@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the event')
              .setRequired(true)
              .addChoices(
+				{name: 'atrocious attraction', value: 'atrocious attraction'},
 				{name: 'special offensive', value: 'special offensive'},
 				{name: 'crusher of heroes', value: 'crusher of heroes'},
 				{name: 'rage of the past', value: 'rage of the past'},
