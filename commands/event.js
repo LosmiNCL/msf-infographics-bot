@@ -15,15 +15,11 @@ module.exports = {
              .setDescription('Name of the event')
              .setRequired(true)
              .addChoices(
+				{name: 'grand theft quantum', value: 'grand theft quantum'},
 				{name: 'atrocious attraction', value: 'atrocious attraction'},
 				{name: 'special offensive', value: 'special offensive'},
 				{name: 'crusher of heroes', value: 'crusher of heroes'},
 				{name: 'rage of the past', value: 'rage of the past'},
-                {name: 'war zone milestone', value: 'war zone milestone'},
-				{name: 'woman out of time', value: 'woman out of time'},
-				{name: 'rising star and battlefield ready events', value: 'rising star and battlefield ready events'},
-				{name: 'super patriot weekly events 4th week', value: 'super patriot weekly events 4th week'},
-				{name: 'lunar festival', value: 'lunar festival'},
 				{name: 'trial of strength', value: 'trial of strength'},
 				{name: 'trial of strenght without hoarding', value: 'trial of strenght without hoarding'}
              )),
