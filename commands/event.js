@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the event')
              .setRequired(true)
              .addChoices(
+				{name: 'he who remains', value: 'he who remains'},
 				{name: 'debonair death', value: 'debonair death'},
 				{name: 'driving force', value: 'driving force'},
 				{name: 'grand theft quantum', value: 'grand theft quantum'},
