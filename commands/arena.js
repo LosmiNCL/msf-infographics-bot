@@ -15,6 +15,8 @@ module.exports = {
 			.setDescription('Name of the Team')
 			.setRequired(true)
 			.addChoices(
+				{name: 'arena offense tangled web kang dormammu red hulk', value: 'arena offense tangled web kang dormammu red hulk'},
+				{name: 'arena offense tangled web kang dormammu rogue', value: 'arena offense tangled web kang dormammu rogue'},
 				{name: 'arena meta horsemen tangled web', value: 'arena meta horsemen tangled web'},
 				{name: 'arena defense horsemen dormammu', value: 'arena defense horsemen dormammu'},
 				{name: 'arena defense tangled web emma dormammu red hulk', value: 'arena defense tangled web emma dormammu red hulk'},
@@ -61,6 +63,18 @@ module.exports = {
 				{name: 'Detailed Guide', value: postUrl},
 				{name: 'Youtube video', value: youtubeUrl}
 			)
+			.setImage(imageUrl)
+
+			try{
+				await interaction.channel.send({embeds: [embedSent]})
+			} catch(err){
+			await interaction.reply('Inform the Admin of your Discord server to give me required permissions. We cannot stop Ultimus like this!');
+			catchErr(err);
+			}
+		}
+		else if(interaction.options.getString("arena-team") === 'arena offense tangled web kang dormammu rogue' || interaction.options.getString("arena-team") === 'arena offense tangled web kang dormammu red hulk') {
+			const embedSent = new EmbedBuilder()
+			.setTitle(interaction.options.getString("arena-team"))
 			.setImage(imageUrl)
 
 			try{
