@@ -15,18 +15,10 @@ module.exports = {
              .setDescription('Name of the event')
              .setRequired(true)
              .addChoices(
+				{name: 'cold storage quick resume', value: 'cold storage quick resume'},
+				{name: 'cold storage', value: 'cold storage'},
 				{name: 'charging station events', value: 'charging station events'},
 				{name: 'return to the shadows', value: 'return to the shadows'},
-				{name: 'he who remains', value: 'he who remains'},
-				{name: 'debonair death', value: 'debonair death'},
-				{name: 'driving force', value: 'driving force'},
-				{name: 'grand theft quantum', value: 'grand theft quantum'},
-				{name: 'atrocious attraction', value: 'atrocious attraction'},
-				{name: 'special offensive', value: 'special offensive'},
-				{name: 'crusher of heroes', value: 'crusher of heroes'},
-				{name: 'rage of the past', value: 'rage of the past'},
-				{name: 'trial of strength', value: 'trial of strength'},
-				{name: 'trial of strenght without hoarding', value: 'trial of strenght without hoarding'}
              )),
     async execute(interaction) {
 
