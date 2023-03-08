@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the event')
              .setRequired(true)
              .addChoices(
+				{name: "commander's cache", value: "commander's cache"},
 				{name: 'cold storage quick resume', value: 'cold storage quick resume'},
 				{name: 'cold storage', value: 'cold storage'},
 				{name: 'charging station events', value: 'charging station events'},
