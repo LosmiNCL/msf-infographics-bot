@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the event')
              .setRequired(true)
              .addChoices(
+				{name: 'blast from the past', value: 'blast from the past'},
 				{name: 'historic encounter', value: 'historic encounter'},
 				{name: "commander's cache", value: "commander's cache"},
 				{name: 'cold storage quick resume', value: 'cold storage quick resume'},
@@ -38,60 +39,61 @@ module.exports = {
 			}
 		})
 
-		await get(child(dbref, '/infographics/event/' + interaction.options.getString("event") + '/post-url')).then((snapshot) => {
-			if (snapshot.exists()){
-				postUrl = snapshot.val();
+		if(interaction.options.getString("event") != 'blast from the past'){
+			await get(child(dbref, '/infographics/event/' + interaction.options.getString("event") + '/post-url')).then((snapshot) => {
+				if (snapshot.exists()){
+					postUrl = snapshot.val();
 
-			} else {
-				postUrl = "Not found";
-			}
-		})
+				} else {
+					postUrl = "Not found";
+				}
+			})
+		}
 
-		if(interaction.options.getString("event") === 'war zone milestone' || interaction.options.getString("event") === 'woman out of time'
-			|| interaction.options.getString("event") === 'rising star and battlefield ready events'){
+		if(interaction.options.getString("event") != 'blast from the past'){
+
+			var commandName = interaction.options.getString("event");
+			formattedImageUrl = hyperlink(commandName + ' infographic', imageUrl);
+			formattedPostUrl = hyperlink(commandName + ' details', postUrl);
+
+			const embedSent = new EmbedBuilder()
+			.setTitle(interaction.options.getString("event"))
+			.setFields(
+				{name: 'Detailed guide available at: ', value: formattedPostUrl},
+				{name: 'Infographic available at: ', value: formattedImageUrl},
+			)
+
+			try{
+				await interaction.channel.send({embeds: [embedSent]});
+	
+				await interaction.reply('Good luck Commander!');
 				
-				var commandName = interaction.options.getString("event");
-				formattedPostUrl = hyperlink(commandName + ' details', postUrl);
-
-				const embedSent = new EmbedBuilder()
-				.setTitle(interaction.options.getString("event"))
-				.setFields(
-					{name: 'More info: ', value: formattedPostUrl},
-				)
-				.setImage(imageUrl)
-	
-				try{
-					await interaction.channel.send({embeds: [embedSent]});
+			} catch(err){
+				await interaction.reply('Inform the Admin of your Discord server to give me required permissions. We cannot stop Ultimus like this!');
+				catchErr(err);
+			}	
+		}
 		
-					await interaction.reply('Good luck Commander!');
-					
-				} catch(err){
-					await interaction.reply('Inform the Admin of your Discord server to give me required permissions. We cannot stop Ultimus like this!');
-					catchErr(err);
-				}				
-			}
-			else{
-				var commandName = interaction.options.getString("event");
-				formattedImageUrl = hyperlink(commandName + ' infographic', imageUrl);
-				formattedPostUrl = hyperlink(commandName + ' details', postUrl);
+		else{
+			var commandName = interaction.options.getString("event");
+			formattedImageUrl = hyperlink(commandName + ' infographic', imageUrl);
 
-				const embedSent = new EmbedBuilder()
-				.setTitle(interaction.options.getString("event"))
-				.setFields(
-					{name: 'Detailed guide available at: ', value: formattedPostUrl},
-					{name: 'Infographic available at: ', value: formattedImageUrl},
-				)
+			const embedSent = new EmbedBuilder()
+			.setTitle(interaction.options.getString("event"))
+			.setFields(
+				{name: 'Infographic available at: ', value: formattedImageUrl},
+			)
+
+			try{
+				await interaction.channel.send({embeds: [embedSent]});
 	
-				try{
-					await interaction.channel.send({embeds: [embedSent]});
-		
-					await interaction.reply('Good luck Commander!');
-					
-				} catch(err){
-					await interaction.reply('Inform the Admin of your Discord server to give me required permissions. We cannot stop Ultimus like this!');
-					catchErr(err);
-				}				
-			}
+				await interaction.reply('Good luck Commander!');
+				
+			} catch(err){
+				await interaction.reply('Inform the Admin of your Discord server to give me required permissions. We cannot stop Ultimus like this!');
+				catchErr(err);
+			}	
+		}
 
     },
 };
