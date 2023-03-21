@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
+				{name: 'invaders', value: 'invaders'},
                 {name: 'masters of evil', value: 'masters of evil'}
              )),
     async execute(interaction) {

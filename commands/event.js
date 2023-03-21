@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the event')
              .setRequired(true)
              .addChoices(
+				{name: 'to the moon', value: 'to the moon'},
 				{name: 'luck of spring', value: 'luck of spring'},
 				{name: 'blast from the past', value: 'blast from the past'},
 				{name: 'historic encounter', value: 'historic encounter'},
