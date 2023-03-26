@@ -15,7 +15,7 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
-                {name: 'eternals and tangled web', value: 'eternals and tangled web'},
+                {name: 'tangled web and eternals', value: 'tangled web and eternals'},
                 {name: 'symbiotes', value: 'symbiotes'},
 				{name: 'tangled web and web warriors', value: 'tangled web and web warriors'},
 				{name: 'web warriors', value: 'web warriors'},
