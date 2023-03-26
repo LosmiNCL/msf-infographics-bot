@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
+				{name: 'gamma', value: 'gamma'},
                 {name: 'eternals and new warrior', value: 'eternals and new warrior'},
                 {name: 'eternals and tangled web', value: 'eternals and tangled web'},
 				{name: 'skill team and baron zemo', value: 'skill team and baron zemo'},

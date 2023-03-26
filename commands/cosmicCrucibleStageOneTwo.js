@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
+				{name: 'masters of evil', value: 'masters of evil'},
                 {name: 'hero asgardian', value: 'hero asgardian'},
                 {name: 'underworld', value: 'underworld'},
 				{name: 'young avengers', value: 'young avengers'},
