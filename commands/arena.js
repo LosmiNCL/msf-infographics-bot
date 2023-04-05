@@ -15,6 +15,7 @@ module.exports = {
 			.setDescription('Name of the Team')
 			.setRequired(true)
 			.addChoices(
+				{name: 'arena defense horsemen apocalypse absorbing men and doctor doom', value: 'arena defense horsemen apocalypse absorbing men and doctor doom'},
 				{name: 'arena offense horsemen apocalypse and nick furry', value: 'arena offense horsemen apocalypse and nick furry'},
 				{name: 'arena defense horsemen apocalypse emma', value: 'arena defense horsemen apocalypse emma'},
 				{name: 'arena offense horsemen apocalypse kang', value: 'arena offense horsemen apocalypse kang'},
@@ -77,7 +78,7 @@ module.exports = {
 		}
 		else if(interaction.options.getString("arena-team") === 'arena offense tangled web kang dormammu rogue' || interaction.options.getString("arena-team") === 'arena offense tangled web kang dormammu red hulk'
 					|| interaction.options.getString("arena-team") === 'arena offense horsemen apocalypse kang' || interaction.options.getString("arena-team") === 'arena defense horsemen apocalypse emma'
-					|| interaction.options.getString("arena-team") === 'arena offense horsemen apocalypse and nick furry') {
+					|| interaction.options.getString("arena-team") === 'arena offense horsemen apocalypse and nick furry' || interaction.options.getString("arena-team") === 'arena defense horsemen apocalypse absorbing men and doctor doom') {
 			const embedSent = new EmbedBuilder()
 			.setTitle(interaction.options.getString("arena-team"))
 			.setImage(imageUrl)
