@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
+				{name: 'test', value: 'test'},
 				{name: 'skill - invaders', value: 'skill - invaders'},
                 {name: 'tech', value: 'tech'},
                 {name: 'skill', value: 'skill'},
