@@ -16,7 +16,9 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['quicksilver', 'captain america wwii', 'bucky barnes', 'union jack', 'iron fist wwii', 'firestar',
+        const choices = ['korg', 'gwenpool',
+                        'nova', 'cosmo', 'thor infinity war', 'star-lord annihilation', 'quicksilver',
+                        'captain america wwii', 'bucky barnes', 'union jack', 'iron fist wwii', 'firestar',
                         'apocalypse', 'moonstone', 'kang the conqueror', 'absorbing man',
                         'agent venom', 'archangel', 'captain carter', 'nemesis', 'titania',
                         'us agent', 'captain america', 'ultron', 'winter soldier', 'aim assaulter',

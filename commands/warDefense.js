@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
+				{name: 'knowhere', value: 'knowhere'},
                 {name: 'aim', value: 'aim'},
                 {name: 'astonishing x-men', value: 'astonishing x-men'},
 				{name: 'black order', value: 'black order'},
