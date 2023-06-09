@@ -17,7 +17,7 @@ module.exports = {
              .addChoices(
                 {name: 'global', value: 'global'},
                 {name: 'cosmic', value: 'cosmic'},
-				{name: 'city', value: 'city'}
+				{name: 'city', value: 'city'},
              )),
     async execute(interaction) {
 

@@ -17,7 +17,7 @@ module.exports = {
              .addChoices(
                 {name: 'darkhold and apocalypse', value: 'darkhold and apocalypse'},
                 {name: 'darkhold and doctor doom', value: 'darkhold and doctor doom'},
-				{name: 'darkhold and quicksilver', value: 'darkhold and quicksilver'}
+				{name: 'darkhold and quicksilver', value: 'darkhold and quicksilver'},
              )),
     async execute(interaction) {
 

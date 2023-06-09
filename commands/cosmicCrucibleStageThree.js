@@ -16,7 +16,7 @@ module.exports = {
              .setRequired(true)
              .addChoices(
 				{name: 'war dogs', value: 'war dogs'},
-                {name: 'young avengers and doctor doom', value: 'young avengers and doctor doom'}
+                {name: 'young avengers and doctor doom', value: 'young avengers and doctor doom'},
              )),
     async execute(interaction) {
 

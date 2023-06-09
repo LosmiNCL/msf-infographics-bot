@@ -15,7 +15,7 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
-				{name: 'unlimited x-men and bishop', value: 'unlimited x-men and bishop'}
+				{name: 'unlimited x-men and bishop', value: 'unlimited x-men and bishop'},
              )),
     async execute(interaction) {
 

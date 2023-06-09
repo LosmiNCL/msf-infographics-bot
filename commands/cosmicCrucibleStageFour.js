@@ -16,7 +16,7 @@ module.exports = {
              .setRequired(true)
              .addChoices(
                 {name: 'gamma', value: 'gamma'},
-                {name: 'war dogs', value: 'war dogs'}
+                {name: 'war dogs', value: 'war dogs'},
              )),
     async execute(interaction) {
 

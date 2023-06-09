@@ -15,7 +15,7 @@ module.exports = {
              .setDescription('Tips and Tricks')
              .setRequired(true)
              .addChoices(
-                {name: 'general hoarding tips', value: 'general hoarding tips'}
+                {name: 'general hoarding tips', value: 'general hoarding tips'},
              )),
     async execute(interaction) {
 

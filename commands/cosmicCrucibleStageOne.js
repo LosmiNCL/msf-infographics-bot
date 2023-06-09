@@ -15,7 +15,7 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
-				{name: 'infinity watch', value: 'infinity watch'}
+				{name: 'infinity watch', value: 'infinity watch'},
              )),
     async execute(interaction) {
 
