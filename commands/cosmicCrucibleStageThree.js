@@ -15,11 +15,8 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
-				{name: 'gamma', value: 'gamma'},
-                {name: 'eternals and new warrior', value: 'eternals and new warrior'},
-                {name: 'eternals and tangled web', value: 'eternals and tangled web'},
-				{name: 'skill team and baron zemo', value: 'skill team and baron zemo'},
-				{name: 'eternals loki zemo emma', value: 'eternals loki zemo emma'},
+				{name: 'war dogs', value: 'war dogs'},
+                {name: 'young avengers and doctor doom', value: 'young avengers and doctor doom'}
              )),
     async execute(interaction) {
 

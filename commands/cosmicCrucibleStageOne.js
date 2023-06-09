@@ -9,18 +9,13 @@ const catchErr = err => {
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('cc1-2')
-        .setDescription('Teams for the Cosmic Crucible Stage 1 and 2')
+        .setDescription('Teams for the Cosmic Crucible Stage 1')
         .addStringOption(option =>
-             option.setName('cc1-2-team')
+             option.setName('cc1-team')
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
-				{name: 'masters of evil', value: 'masters of evil'},
-                {name: 'hero asgardian', value: 'hero asgardian'},
-                {name: 'underworld', value: 'underworld'},
-				{name: 'young avengers', value: 'young avengers'},
-				{name: 'bionic avengers', value: 'bionic avengers'},
-				{name: 'rebirth', value: 'rebirth'}
+				{name: 'infinity watch', value: 'infinity watch'}
              )),
     async execute(interaction) {
 
@@ -28,7 +23,7 @@ module.exports = {
 		var postUrlDefSetup = null;
 		var postUrlCounters = null;
 
-        await get(child(dbref, '/infographics/cosmic-crucible-s1-s2/' + interaction.options.getString("cc1-2-team") + '/image-url')).then((snapshot) => {
+        await get(child(dbref, '/infographics/cosmic-crucible-s1/' + interaction.options.getString("cc1-team") + '/image-url')).then((snapshot) => {
 			if (snapshot.exists()){
 				imageUrl = snapshot.val();
 
@@ -37,7 +32,7 @@ module.exports = {
 			}
 		})
 
-		await get(child(dbref, '/infographics/cosmic-crucible-s1-s2/' + interaction.options.getString("cc1-2-team") + '/post-url-def-setup')).then((snapshot) => {
+		await get(child(dbref, '/infographics/cosmic-crucible-s1/' + interaction.options.getString("cc1-team") + '/post-url-def-setup')).then((snapshot) => {
 			if (snapshot.exists()){
 				postUrlDefSetup = snapshot.val();
 
@@ -46,7 +41,7 @@ module.exports = {
 			}
 		})
 
-		await get(child(dbref, '/infographics/cosmic-crucible-s1-s2/' + interaction.options.getString("cc1-2-team") + '/post-url-counters')).then((snapshot) => {
+		await get(child(dbref, '/infographics/cosmic-crucible-s1/' + interaction.options.getString("cc1-team") + '/post-url-counters')).then((snapshot) => {
 			if (snapshot.exists()){
 				postUrlCounters = snapshot.val();
 
@@ -56,7 +51,7 @@ module.exports = {
 		})
 
 		const embedSent = new EmbedBuilder()
-		.setTitle(interaction.options.getString("cc1-2-team"))
+		.setTitle(interaction.options.getString("cc1-team"))
 		.setFields(
 			{name: 'Cosmic Crucible - the best Defensive Setup', value: postUrlDefSetup},
 			{name: 'Cosmic Crucible - Team Counters', value: postUrlCounters}
