@@ -8,7 +8,7 @@ const catchErr = err => {
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('cc1-2')
+        .setName('cc1')
         .setDescription('Teams for the Cosmic Crucible Stage 1')
         .addStringOption(option =>
              option.setName('cc1-team')
