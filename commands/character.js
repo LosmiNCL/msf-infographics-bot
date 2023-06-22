@@ -16,7 +16,8 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['korg', 'gwenpool',
+        const choices = ['vahl' ,'beta ray bill',
+                        'sylvie' ,'loki teen' ,'super skrull' ,'korg', 'gwenpool',
                         'nova', 'cosmo', 'thor infinity war', 'star-lord annihilation', 'quicksilver',
                         'captain america wwii', 'bucky barnes', 'union jack', 'iron fist wwii', 'firestar',
                         'apocalypse', 'moonstone', 'kang the conqueror', 'absorbing man',
