@@ -24,7 +24,7 @@ module.exports = {
                         'agent venom', 'archangel', 'captain carter', 'nemesis', 'titania',
                         'us agent', 'captain america', 'ultron', 'winter soldier', 'aim assaulter',
                         'aim infector', 'aim monstrosity', 'aim researcher', 'aim security', 'abomination',
-                        'adam warlock', 'agatha harkness', 'agent coulson', 'america chavez', 'ant-men',
+                        'adam warlock', 'agatha harkness', 'agent coulson', 'america chavez', 'ant-man',
                         'anti-venom', 'baron zemo', 'beast', 'bishop', 'black bolt',
                         'black panther', 'black panther 1mm', 'black widow', 'blob', 'brawn',
                         'bullseye', 'cable', 'captain america sam', 'captain marvel', 'carnage',
