@@ -15,14 +15,15 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
-				{name: 'war dogs', value: 'war dogs'},
-                {name: 'young avengers and doctor doom', value: 'young avengers and doctor doom'},
+				{name: 'knowhere', value: 'knowhere'},
+                {name: 'knowhere and apocalypse', value: 'knowhere and apocalypse'},
+				{name: 'infinity watch', value: 'infinity watch'},
+				{name: 'hero asgardian', value: 'hero asgardian'}
              )),
     async execute(interaction) {
 
 		var imageUrl = null;
 		var postUrlDefSetup = null;
-		var postUrlCounters = null;
 
         await get(child(dbref, '/infographics/cosmic-crucible-s3/' + interaction.options.getString("cc3-team") + '/image-url')).then((snapshot) => {
 			if (snapshot.exists()){
@@ -42,20 +43,10 @@ module.exports = {
 			}
 		})
 
-		await get(child(dbref, '/infographics/cosmic-crucible-s3/' + interaction.options.getString("cc3-team") + '/post-url-counters')).then((snapshot) => {
-			if (snapshot.exists()){
-				postUrlCounters = snapshot.val();
-
-			} else {
-				postUrlCounters = "Not found";
-			}
-		})
-
 		const embedSent = new EmbedBuilder()
 		.setTitle(interaction.options.getString("cc3-team"))
 		.setFields(
-			{name: 'Cosmic Crucible - the best Defensive Setup', value: postUrlDefSetup},
-			{name: 'Cosmic Crucible - Team Counters', value: postUrlCounters}
+			{name: 'Cosmic Crucible - the best Defensive Setup', value: postUrlDefSetup}
 		)
         .setImage(imageUrl)
 

@@ -15,13 +15,15 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
+				{name: 'undying and dormammu', value: 'undying and dormammu'},
 				{name: 'infinity watch', value: 'infinity watch'},
+				{name: 'gamma', value: 'gamma'},
+				{name: 'gamma and apocalypse', value: 'gamma and apocalypse'}
              )),
     async execute(interaction) {
 
 		var imageUrl = null;
 		var postUrlDefSetup = null;
-		var postUrlCounters = null;
 
         await get(child(dbref, '/infographics/cosmic-crucible-s1/' + interaction.options.getString("cc1-team") + '/image-url')).then((snapshot) => {
 			if (snapshot.exists()){
@@ -41,20 +43,10 @@ module.exports = {
 			}
 		})
 
-		await get(child(dbref, '/infographics/cosmic-crucible-s1/' + interaction.options.getString("cc1-team") + '/post-url-counters')).then((snapshot) => {
-			if (snapshot.exists()){
-				postUrlCounters = snapshot.val();
-
-			} else {
-				postUrlCounters = "Not found";
-			}
-		})
-
 		const embedSent = new EmbedBuilder()
 		.setTitle(interaction.options.getString("cc1-team"))
 		.setFields(
-			{name: 'Cosmic Crucible - the best Defensive Setup', value: postUrlDefSetup},
-			{name: 'Cosmic Crucible - Team Counters', value: postUrlCounters}
+			{name: 'Cosmic Crucible - the best Defensive Setup', value: postUrlDefSetup}
 		)
         .setImage(imageUrl)
 
