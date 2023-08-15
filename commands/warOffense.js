@@ -15,6 +15,7 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
+				{name: 'a-force', value: 'a-force'},
 				{name: 'knowhere', value: 'knowhere'},
                 {name: 'a force and silver surfer', value: 'a force and silver surfer'},
                 {name: 'bionic avengers', value: 'bionic avengers'},
