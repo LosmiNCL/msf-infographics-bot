@@ -15,18 +15,12 @@ module.exports = {
 			.setDescription('Name of the Team')
 			.setRequired(true)
 			.addChoices(
-				{name: 'arena defense horsemen apocalypse absorbing men and doctor doom', value: 'arena defense horsemen apocalypse absorbing men and doctor doom'},
-				{name: 'arena offense horsemen apocalypse and nick furry', value: 'arena offense horsemen apocalypse and nick furry'},
-				{name: 'arena defense horsemen apocalypse emma', value: 'arena defense horsemen apocalypse emma'},
-				{name: 'arena offense horsemen apocalypse kang', value: 'arena offense horsemen apocalypse kang'},
-				{name: 'arena offense tangled web kang dormammu red hulk', value: 'arena offense tangled web kang dormammu red hulk'},
-				{name: 'arena offense tangled web kang dormammu rogue', value: 'arena offense tangled web kang dormammu rogue'},
-				{name: 'arena meta horsemen tangled web', value: 'arena meta horsemen tangled web'},
-				{name: 'arena defense horsemen dormammu', value: 'arena defense horsemen dormammu'},
-				{name: 'arena defense tangled web emma dormammu red hulk', value: 'arena defense tangled web emma dormammu red hulk'},
-				{name: 'arena defense emma dormammu rogue', value: 'arena defense emma dormammu rogue'},
-				{name: 'arena defense tangled web emma eternals', value: 'arena defense tangled web emma eternals'},
-				{name: 'arena defense horsemen and apocalypse', value: 'arena defense horsemen and apocalypse'},
+				{name: 'ultimate arena meta - offense and defense', value: 'ultimate arena meta - offense and defense'},
+				{name: 'secret defenders - offense and defense', value: 'secret defenders - offense and defense'},
+				{name: 'secret defenders and apocalypse - offense and defense', value: 'secret defenders and apocalypse - offense and defense'},
+				{name: 'apocalypse horsemen and nick fury - offense', value: 'apocalypse horsemen and nick fury - offense'},
+				{name: 'apocalypse horsemen and kang - offense defense', value: 'apocalypse horsemen and kang - offense defense'},
+				{name: 'apocalypse horseman and cable - defense', value: 'apocalypse horseman and cable - defense'}
 			)),
 	async execute(interaction) {
 		var postUrl = null;
