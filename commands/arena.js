@@ -20,7 +20,7 @@ module.exports = {
 				{name: 'secret defenders and apocalypse - offense and defense', value: 'secret defenders and apocalypse - offense and defense'},
 				{name: 'apocalypse horsemen and nick fury - offense', value: 'apocalypse horsemen and nick fury - offense'},
 				{name: 'apocalypse horsemen and kang - offense defense', value: 'apocalypse horsemen and kang - offense defense'},
-				{name: 'apocalypse horseman and cable - defense', value: 'apocalypse horseman and cable - defense'}
+				{name: 'apocalypse horsemen and cable - defense', value: 'apocalypse horsemen and cable - defense'}
 			)),
 	async execute(interaction) {
 		var postUrl = null;
