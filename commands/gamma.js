@@ -15,6 +15,8 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
+				{name: 'infestation', value: 'infestation'},
+				{name: 'secret defenders', value: 'secret defenders'},
                 {name: 'avenger guardian spider-verse', value: 'avenger guardian spider-verse'},
                 {name: 'brotherhood mercenary x-men', value: 'brotherhood mercenary x-men'},
 				{name: 'defender heroes for hire hydra mercenary', value: 'defender heroes for hire hydra mercenary'},
