@@ -16,7 +16,7 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['red goblin', 'starbrand',
+        const choices = ['mephisto', 'iron patriot', 'the leader', 'red goblin', 'starbrand',
                         'cosmic ghost rider', 'black knight', 'void knight', 'gwenom', 'nightcrawler',
                         'forge', 'sunspot', 'green goblin classic', 'kraven the hunter', 'lizard',
                         'spider-slayer','juggernaut zombie', 'iron man infinity war', 'darkhawk', 'ironheart mk ii',
