@@ -15,17 +15,16 @@ module.exports = {
              .setDescription('Name of the team')
              .setRequired(true)
              .addChoices(
-				{name: 'mutant', value: 'mutant'},
-                {name: 'bio', value: 'bio'},
-                {name: 'skill', value: 'skill'},
-                {name: 'mystic bifrost', value: 'mystic bifrost'},
-                {name: 'old mystic', value: 'old mystic'},
-                {name: 'tech', value: 'tech'}
+				{name: 'incursion mystic', value: 'incursion mystic'},
+                {name: 'incursion tech', value: 'incursion tech'},
+                {name: 'incursion mutant', value: 'incursion mutant'},
+                {name: 'incursion bio', value: 'incursion bio'},
+                {name: 'incursion skill', value: 'incursion skill'}
              )),
     async execute(interaction) {
 
 		var imageUrl = null;
-		var postUrl = null;
+		//var postUrl = null;
 
         await get(child(dbref, '/infographics/incursion/' + interaction.options.getString("incursion-team") + '/image-url')).then((snapshot) => {
 			if (snapshot.exists()){
@@ -36,20 +35,20 @@ module.exports = {
 			}
 		})
 
-		await get(child(dbref, '/infographics/incursion/' + interaction.options.getString("incursion-team") + '/post-url')).then((snapshot) => {
+		/*await get(child(dbref, '/infographics/incursion/' + interaction.options.getString("incursion-team") + '/post-url')).then((snapshot) => {
 			if (snapshot.exists()){
 				postUrl = snapshot.val();
 
 			} else {
 				postUrl = "Not found";
 			}
-		})
+		})*/
 
 		const embedSent = new EmbedBuilder()
 		.setTitle(interaction.options.getString("incursion-team"))
-		.setFields(
+		/*.setFields(
 			{name: 'Raid List', value: postUrl},
-		)
+		)*/
         .setImage(imageUrl)
 
 		try{
