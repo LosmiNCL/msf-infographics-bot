@@ -8,27 +8,25 @@ const catchErr = err => {
 
 module.exports = {
     data: new SlashCommandBuilder()
-	.setName('raids')
-	.setDescription('Teams for Raids')
-	.addSubcommand(subcommand =>
-		subcommand
-			.setName('incursion')
-			.setDescription('Teams for Incursion Raids')
-			.addUserOption(option => option.setName('incursion-team').setDescription('Name of the team')
-            .setRequired(true)
-            .addChoices(
-               {name: 'incursion mystic', value: 'incursion mystic'},
-               {name: 'incursion tech', value: 'incursion tech'},
-               {name: 'incursion mutant', value: 'incursion mutant'},
-               {name: 'incursion bio', value: 'incursion bio'},
-               {name: 'incursion skill', value: 'incursion skill'}
-            ))),
-        async execute(interaction) {
+        .setName('incursion')
+        .setDescription('Teams for the Incursion Raids')
+        .addStringOption(option =>
+             option.setName('incursion-team')
+             .setDescription('Name of the team')
+             .setRequired(true)
+             .addChoices(
+				{name: 'incursion mystic', value: 'incursion mystic'},
+                {name: 'incursion tech', value: 'incursion tech'},
+                {name: 'incursion mutant', value: 'incursion mutant'},
+                {name: 'incursion bio', value: 'incursion bio'},
+                {name: 'incursion skill', value: 'incursion skill'}
+             )),
+    async execute(interaction) {
 
 		var imageUrl = null;
 		//var postUrl = null;
 
-        await get(child(dbref, '/infographics/raids/incursion/' + interaction.options.getString("incursion-team") + '/image-url')).then((snapshot) => {
+        await get(child(dbref, '/infographics/incursion/' + interaction.options.getString("incursion-team") + '/image-url')).then((snapshot) => {
 			if (snapshot.exists()){
 				imageUrl = snapshot.val();
 
