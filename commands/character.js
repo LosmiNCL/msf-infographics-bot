@@ -16,7 +16,8 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['sasquatch', 'northstar', 'guardian', 'old man logan',
+        const choices = ['captain britain', 'hank pym',
+                        'black panther shuri','sasquatch', 'northstar', 'guardian', 'old man logan',
                         'daken', 'pandapool', 'spider-man pavitr', 'peni parker', 'peter b parker',
                         'mephisto', 'iron patriot', 'the leader', 'red goblin', 'starbrand',
                         'cosmic ghost rider', 'black knight', 'void knight', 'gwenom', 'nightcrawler',
