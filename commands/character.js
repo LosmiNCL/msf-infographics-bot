@@ -16,7 +16,8 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['scarlet witch zombie' ,'blade', 'man-thing', 'oath',
+        const choices = ['ancient one', 'shadow king',
+                        'emma frost x-men', 'scarlet witch zombie', 'blade', 'man-thing', 'oath',
                         'odin', 'omega sentinel', 'nimrod', 'sentinel','thanos endgame',
                         'gorr', 'gladiator', 'ares', 'captain britain', 'hank pym',
                         'black panther shuri','sasquatch', 'northstar', 'guardian', 'old man logan',
