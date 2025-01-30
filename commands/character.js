@@ -16,7 +16,8 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['omega red phoenix force', 'hercules', 'jean grey',
+        const choices = ['peggy carter',
+                        'patriot', 'falcon joaquin', 'omega red phoenix force', 'hercules', 'jean grey',
                         'medusa', 'ms marvel classic', 'kahhori', 'ancient one', 'shadow king',
                         'emma frost x-men', 'scarlet witch zombie', 'blade', 'man-thing', 'oath',
                         'odin', 'omega sentinel', 'nimrod', 'sentinel','thanos endgame',
