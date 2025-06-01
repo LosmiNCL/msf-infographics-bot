@@ -16,7 +16,8 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['victoria hand', 'songbird', 'hyperion',
+        const choices = ['the hood',
+                        'satana', 'hellverine', 'victoria hand', 'songbird', 'hyperion',
                         'quasar', 'professor xavier', 'hit monkey', 'daredevil modern', 'silver sable',
                         'knull', 'havok', 'lilandra', 'howard the duck', 'peggy carter',
                         'patriot', 'falcon joaquin', 'omega red phoenix force', 'hercules', 'jean grey',
