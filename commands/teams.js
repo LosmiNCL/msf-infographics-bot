@@ -46,7 +46,7 @@ module.exports = {
 		var imageUrl = null;
 		var postUrl = null;
 
-        let apostrophChecker = interaction.options.getString("character-name").toLowerCase();
+        let apostrophChecker = interaction.options.getString("team-name").toLowerCase();
 
         if(apostrophChecker === 'p.e.g.a.s.u.s.'){
             apostrophChecker = 'pegasus';
