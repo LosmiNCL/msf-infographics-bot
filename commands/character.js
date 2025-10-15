@@ -16,7 +16,8 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['daimon hellstrom', 'hellcat', 'living mummy', 'hobgoblin', 'superior spider-man',
+        const choices = ['sentry',
+                        'daimon hellstrom', 'hellcat', 'living mummy', 'hobgoblin', 'superior spider-man',
                         'scorpion', 'phantom rider', 'sebastian shaw', 'azazel', 'rachel summers',
                         'blastaar', 'invisible woman mcu', 'mister fantastic mcu', 'franklin richards', 'the hood',
                         'satana', 'hellverine', 'victoria hand', 'songbird', 'hyperion',
