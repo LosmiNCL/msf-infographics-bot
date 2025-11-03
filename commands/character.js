@@ -16,7 +16,8 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['kestrel zombie', 'sentry',
+        const choices = ['thunderstrike', 'blue marvel',
+                        'sword master', 'lady bullseye', 'steel serpent', 'kestrel zombie', 'sentry',
                         'daimon hellstrom', 'hellcat', 'living mummy', 'hobgoblin', 'superior spider-man',
                         'scorpion', 'phantom rider', 'sebastian shaw', 'azazel', 'rachel summers',
                         'blastaar', 'invisible woman mcu', 'mister fantastic mcu', 'franklin richards', 'the hood',
