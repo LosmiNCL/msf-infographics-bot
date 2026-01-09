@@ -16,7 +16,7 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['new mutant', 'immortal weapon',
+        const choices = ['winter guard', 'new mutant', 'immortal weapon',
                         'brimstone', 'insidious six', 'secret warrior', 'hellfire club', 'fantastic four mcu',
                         'accursed', 'thunderbolt', 'vigilante', 'starjammer', 'phoenix force',
                         'liberty', 'immortal x-men', 'mighty avenger', 'uncanny avenger', 'absolute a-force',
