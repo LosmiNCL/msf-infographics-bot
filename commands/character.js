@@ -16,7 +16,7 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['maestro', 'malekith',
+        const choices = ['annihilus', 'maestro', 'malekith',
                         'executioner', 'high evolutionary', 'eclipse', 'night thrasher', 'speedball',
                         'moon girl', 'nova sam alexander', 'jeff the land shark', 'darkstar', 'ursa major',
                         'cannonball', 'wolfsbane', 'warlock', 'thunderstrike', 'blue marvel',
