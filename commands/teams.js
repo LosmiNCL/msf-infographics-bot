@@ -16,7 +16,7 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['exalted x-men', 'shadow conclave', 'daring warrior', 'champion',
+        const choices = ['omen', 'exalted x-men', 'shadow conclave', 'daring warrior', 'champion',
                         'galactic council', 'retcon', 'winter guard', 'new mutant', 'immortal weapon',
                         'brimstone', 'insidious six', 'secret warrior', 'hellfire club', 'fantastic four mcu',
                         'accursed', 'thunderbolt', 'vigilante', 'starjammer', 'phoenix force',
