@@ -16,7 +16,8 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['quicksilver symbiote', 'toxin', 'riot', 'silver surfer breaker', 'storm mighty',
+        const choices = ['blade mighty', 'spider-woman julia', 'rachel cole-alves',
+                        'quicksilver symbiote', 'toxin', 'riot', 'silver surfer breaker', 'storm mighty',
                         'morph', 'angel', 'annihilus', 'maestro', 'malekith',
                         'executioner', 'high evolutionary', 'eclipse', 'night thrasher', 'speedball',
                         'moon girl', 'nova sam alexander', 'jeff the land shark', 'darkstar', 'ursa major',
