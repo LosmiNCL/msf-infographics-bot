@@ -16,7 +16,7 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['gilgamesh', 'kingo',
+        const choices = ['whiplash', 'iron monger', 'ulysses klaue', 'gilgamesh', 'kingo',
                         'thena', 'scorpion breaker', 'blade mighty', 'spider-woman julia', 'rachel cole-alves',
                         'quicksilver symbiote', 'toxin', 'riot', 'silver surfer breaker', 'storm mighty',
                         'morph', 'angel', 'annihilus', 'maestro', 'malekith',
