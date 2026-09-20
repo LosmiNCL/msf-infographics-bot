@@ -16,7 +16,8 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['iron raider', 'timeless eternal', 'dread', 'amazing avenger', 'symbiote six',
+        const choices = ['west coast avenger',
+                        'iron raider', 'timeless eternal', 'dread', 'amazing avenger', 'symbiote six',
                         'omen', 'exalted x-men', 'shadow conclave', 'daring warrior', 'champion',
                         'galactic council', 'retcon', 'winter guard', 'new mutant', 'immortal weapon',
                         'brimstone', 'insidious six', 'secret warrior', 'hellfire club', 'fantastic four mcu',
