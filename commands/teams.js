@@ -16,7 +16,7 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['a. i. avenger', 'west coast avenger',
+        const choices = ['ai avenger', 'west coast avenger',
                         'iron raider', 'timeless eternal', 'dread', 'amazing avenger', 'symbiote six',
                         'omen', 'exalted x-men', 'shadow conclave', 'daring warrior', 'champion',
                         'galactic council', 'retcon', 'winter guard', 'new mutant', 'immortal weapon',
@@ -54,6 +54,10 @@ module.exports = {
 
         if(apostrophChecker === 'p.e.g.a.s.u.s.'){
             apostrophChecker = 'pegasus';
+        }
+
+        if(apostrophChecker === 'a. i. avenger'){
+            apostrophChecker = 'ai avenger';
         }
         
         await get(child(dbref, '/infographics/teams/' + apostrophChecker + '/image-url')).then((snapshot) => {
