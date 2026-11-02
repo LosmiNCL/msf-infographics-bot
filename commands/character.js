@@ -16,7 +16,8 @@ module.exports = {
         .setAutocomplete(true)),
     async autocomplete(interaction) {
         const focusedValue = interaction.options.getFocused();
-        const choices = ['sabretooth breaker', 'dracula', 'the destroyer',
+        const choices = ['cyclops mighty',
+                        'ka-zar', 'sauron', 'sabretooth breaker', 'dracula', 'the destroyer',
                         'magik breaker', 'hawkeye robot', 'human torch jim', 'jocasta', 'wasp janet',
                         'whiplash', 'iron monger', 'ulysses klaue', 'gilgamesh', 'kingo',
                         'thena', 'scorpion breaker', 'blade mighty', 'spider-woman julia', 'rachel cole-alves',
